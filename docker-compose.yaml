@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  imapapi:
+    image: codejamninja/imapapi:latest
+    container_name: imapapi
+    ports:
+      - 3000:3000
+
+  redis:
+    image: redis:6.0.4
+    container_name: imapapi-redis
+    restart: always
+    command: redis-server --appendonly yes
+    ports:
+      - 6379:6379
+    volumes:
+      - redis:/data
+
+volumes:
+  redis:
+    name: redis-imapapi
