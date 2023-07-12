@@ -2,6 +2,8 @@
 
 > self hosted application to access imap and smtp accounts over rest
 
+![](assets/docker-imapapi.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 ## Installation
